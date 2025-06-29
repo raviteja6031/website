@@ -48,10 +48,21 @@ export function HeroSection() {
             animate={{ y: [-10, 0, -10] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
           >
-            <div className="w-32 h-32 rounded-full mx-auto bg-gradient-to-br from-primary/20 to-purple-600/20 dark:from-primary/30 dark:to-purple-600/30 flex items-center justify-center border-4 border-white dark:border-slate-700 shadow-xl">
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center text-white font-bold text-2xl">
-                RM
-              </div>
+            <div className="w-32 h-32 rounded-full mx-auto border-4 border-white dark:border-slate-700 shadow-xl overflow-hidden relative">
+            <img 
+  src="/profile.jpg" 
+  alt="Raviteja Reddy Maruri" 
+  className="w-full h-full object-cover absolute inset-0"
+  onError={(e) => {
+    e.currentTarget.src = ""; // Optional: set a transparent image or remove this
+    e.currentTarget.parentElement.querySelector('.fallback').style.display = 'flex';
+    e.currentTarget.style.display = 'none';
+  }}
+/>
+<div className="w-full h-full rounded-full bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center text-white font-bold text-2xl absolute inset-0 fallback hidden">
+  RM
+</div>
+
             </div>
           </motion.div>
           
@@ -66,7 +77,7 @@ export function HeroSection() {
             className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-6 font-medium"
             {...fadeInUp}
           >
-            Senior DevOps Engineer & Cloud Architect
+            AWS Java Engineer & Senior DevOps Engineer
           </motion.p>
           
           <motion.p 
@@ -93,13 +104,13 @@ export function HeroSection() {
             className="flex justify-center space-x-6"
             {...fadeInUp}
           >
-            <a href="mailto:raviteja.maruri@gmail.com" className="text-slate-400 hover:text-primary transition-colors duration-200">
+            <a href="mailto:raviteja3061@outlook.com" className="text-slate-400 hover:text-primary transition-colors duration-200">
               <Mail className="w-6 h-6" />
             </a>
-            <a href="https://linkedin.com/in/raviteja-maruri" className="text-slate-400 hover:text-primary transition-colors duration-200">
+            <a href="https://www.linkedin.com/in/raviteja-m-7a769a218/" className="text-slate-400 hover:text-primary transition-colors duration-200">
               <Linkedin className="w-6 h-6" />
             </a>
-            <a href="https://github.com/raviteja-maruri" className="text-slate-400 hover:text-primary transition-colors duration-200">
+            <a href="https://github.com/raviteja6031" className="text-slate-400 hover:text-primary transition-colors duration-200">
               <Github className="w-6 h-6" />
             </a>
           </motion.div>
@@ -251,9 +262,9 @@ export function SkillsSection() {
 export function ExperienceSection() {
   const experiences = [
     {
-      title: "Senior DevOps Engineer",
-      company: "Chevron Corporation",
-      location: "San Ramon, California, USA",
+      title: "AWS Java Engineer",
+      company: "Fujitsu North America, Inc.",
+      location: "Santa Clara, California, USA",
       period: "Jul 2024 – Present",
       achievements: [
         "Reduced deployment time from 3 hours to under 20 minutes",
@@ -263,9 +274,9 @@ export function ExperienceSection() {
       technologies: ["AWS", "Kubernetes", "Jenkins", "Terraform", "ArgoCD", "Go"]
     },
     {
-      title: "Cloud & DevOps Engineer",
-      company: "Skyworks Solutions",
-      location: "Irvine, California, USA",
+      title: "Senior DevOps Engineer",
+      company: "Farm Bureau Insurance of Tennessee",
+      location: "Columbia, Tennessee, USA",
       period: "Mar 2023 – Jun 2024",
       achievements: [
         "Reduced infrastructure setup time by 60% with CloudFormation",
@@ -285,7 +296,20 @@ export function ExperienceSection() {
         "Supported 15+ mobile apps with automated deployments"
       ],
       technologies: ["Jenkins", "Docker", "Kubernetes", "Ansible", "Liferay"]
+    },
+    {
+      title: "SFDC Platform Engineer",
+      company: "Legacy Health",
+      location: "Bangalore, India",
+      period: "Mar 2018 – Dec 2020",
+      achievements: [
+        "Automated Salesforce metadata deployments using Jenkins and Ant, reducing manual errors by 50%",
+        "Enabled daily builds and sandbox deployments across dev, test, and prod environments",
+        "Accelerated package preparation by 30% using dynamic batch scripts for metadata management"
+      ],
+      technologies: ["Salesforce", "Jenkins", "Groovy", "Ant", "GitHub"]
     }
+    
   ];
 
   return (
@@ -454,10 +478,10 @@ export function ProjectsSection() {
 
 export function EducationSection() {
   const certifications = [
-    { name: "AWS Solutions Architect", issuer: "Amazon Web Services", icon: "🔧" },
-    { name: "Certified Kubernetes Administrator", issuer: "Cloud Native Computing Foundation", icon: "⚙️" },
-    { name: "HashiCorp Terraform Associate", issuer: "HashiCorp", icon: "🏗️" },
-    { name: "Docker Certified Associate", issuer: "Docker Inc.", icon: "📦" }
+    // { name: "AWS Solutions Architect", issuer: "Amazon Web Services", icon: "🔧" },
+    // { name: "Certified Kubernetes Administrator", issuer: "Cloud Native Computing Foundation", icon: "⚙️" },
+    // { name: "HashiCorp Terraform Associate", issuer: "HashiCorp", icon: "🏗️" },
+    // { name: "Docker Certified Associate", issuer: "Docker Inc.", icon: "📦" }
   ];
 
   return (
@@ -552,7 +576,7 @@ export function ContactSection() {
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-medium text-slate-900 dark:text-white">Email</h4>
-                  <p className="text-slate-600 dark:text-slate-300">raviteja.maruri@gmail.com</p>
+                  <p className="text-slate-600 dark:text-slate-300">raviteja3061@outlook.com</p>
                 </div>
               </div>
               
@@ -580,13 +604,13 @@ export function ContactSection() {
             <div className="mt-8 pt-8 border-t border-slate-200 dark:border-slate-700">
               <h4 className="text-lg font-medium text-slate-900 dark:text-white mb-4">Connect with me</h4>
               <div className="flex space-x-4">
-                <a href="https://linkedin.com/in/raviteja-maruri" className="w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-lg flex items-center justify-center transition-colors duration-200">
+                <a href="https://www.linkedin.com/in/raviteja-m-7a769a218/" className="w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-lg flex items-center justify-center transition-colors duration-200">
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="https://github.com/raviteja-maruri" className="w-12 h-12 bg-gray-800 hover:bg-gray-900 text-white rounded-lg flex items-center justify-center transition-colors duration-200">
+                <a href="https://github.com/raviteja6031" className="w-12 h-12 bg-gray-800 hover:bg-gray-900 text-white rounded-lg flex items-center justify-center transition-colors duration-200">
                   <Github className="w-5 h-5" />
                 </a>
-                <a href="mailto:raviteja.maruri@gmail.com" className="w-12 h-12 bg-red-600 hover:bg-red-700 text-white rounded-lg flex items-center justify-center transition-colors duration-200">
+                <a href="mailto:raviteja3061@outlook.com" className="w-12 h-12 bg-red-600 hover:bg-red-700 text-white rounded-lg flex items-center justify-center transition-colors duration-200">
                   <Mail className="w-5 h-5" />
                 </a>
               </div>
@@ -607,16 +631,16 @@ export function Footer() {
     <footer className="bg-slate-900 dark:bg-slate-950 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h3 className="text-2xl font-bold mb-4">Raviteja Reddy Maruri</h3>
-          <p className="text-slate-400 mb-6">Senior DevOps Engineer & Cloud Architect</p>
+          <h3 className="text-2xl font-bold mb-4">Raviteja M</h3>
+          <p className="text-slate-400 mb-6">AWS Java Engineer & Senior DevOps Engineer</p>
           <div className="flex justify-center space-x-6 mb-8">
-            <a href="mailto:raviteja.maruri@gmail.com" className="text-slate-400 hover:text-primary transition-colors duration-200">
+            <a href="mailto:raviteja3061@outlook.com" className="text-slate-400 hover:text-primary transition-colors duration-200">
               <Mail className="w-5 h-5" />
             </a>
-            <a href="https://linkedin.com/in/raviteja-maruri" className="text-slate-400 hover:text-primary transition-colors duration-200">
+            <a href="https://www.linkedin.com/in/raviteja-m-7a769a218/" className="text-slate-400 hover:text-primary transition-colors duration-200">
               <Linkedin className="w-5 h-5" />
             </a>
-            <a href="https://github.com/raviteja-maruri" className="text-slate-400 hover:text-primary transition-colors duration-200">
+            <a href="https://github.com/raviteja6031" className="text-slate-400 hover:text-primary transition-colors duration-200">
               <Github className="w-5 h-5" />
             </a>
           </div>

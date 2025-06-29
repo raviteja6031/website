@@ -72,7 +72,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex-shrink-0">
-              <h1 className="text-xl font-bold text-primary">Raviteja Maruri</h1>
+              <h1 className="text-xl font-bold text-primary">Raviteja M</h1>
             </div>
             
             {/* Desktop Navigation */}
@@ -193,7 +193,7 @@ export default function HomePage() {
                         </div>
                         <div className="ml-4">
                           <h4 className="text-lg font-medium text-slate-900 dark:text-white">Email</h4>
-                          <p className="text-slate-600 dark:text-slate-300">raviteja.maruri@gmail.com</p>
+                          <p className="text-slate-600 dark:text-slate-300">raviteja3061@outlook.com</p>
                         </div>
                       </div>
                       
@@ -221,13 +221,13 @@ export default function HomePage() {
                     <div className="mt-8 pt-8 border-t border-slate-200 dark:border-slate-700">
                       <h4 className="text-lg font-medium text-slate-900 dark:text-white mb-4">Connect with me</h4>
                       <div className="flex space-x-4">
-                        <a href="https://linkedin.com/in/raviteja-maruri" className="w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-lg flex items-center justify-center transition-colors duration-200">
+                        <a href="https://www.linkedin.com/in/raviteja-m-7a769a218/" className="w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-lg flex items-center justify-center transition-colors duration-200">
                           <span className="font-bold">in</span>
                         </a>
-                        <a href="https://github.com/raviteja-maruri" className="w-12 h-12 bg-gray-800 hover:bg-gray-900 text-white rounded-lg flex items-center justify-center transition-colors duration-200">
+                        <a href="https://github.com/raviteja6031" className="w-12 h-12 bg-gray-800 hover:bg-gray-900 text-white rounded-lg flex items-center justify-center transition-colors duration-200">
                           <span className="font-bold">GH</span>
                         </a>
-                        <a href="mailto:raviteja.maruri@gmail.com" className="w-12 h-12 bg-red-600 hover:bg-red-700 text-white rounded-lg flex items-center justify-center transition-colors duration-200">
+                        <a href="mailto:raviteja3061@outlook.com" className="w-12 h-12 bg-red-600 hover:bg-red-700 text-white rounded-lg flex items-center justify-center transition-colors duration-200">
                           <Mail className="w-5 h-5" />
                         </a>
                       </div>
